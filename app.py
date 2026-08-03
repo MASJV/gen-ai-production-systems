@@ -179,6 +179,8 @@ if "chunks" not in st.session_state:
     st.session_state.chunks = None
 if "last_sources" not in st.session_state:
     st.session_state.last_sources = None
+if "last_answer" not in st.session_state:
+    st.session_state.last_answer = None
 if "openai_api_key" not in st.session_state:
     st.session_state.openai_api_key = ""
 
@@ -302,6 +304,10 @@ if st.button("🔍 Get Answer", use_container_width=True):
 
             answer = generator.generate_answer(question, top_chunks, st.session_state.openai_api_key)
             st.session_state.last_sources = top_chunks
+            st.session_state.last_answer = answer
 
-        st.subheader("Answer")
-        st.write(answer)
+        st.rerun()
+
+if st.session_state.last_answer:
+    st.subheader("Answer")
+    st.write(st.session_state.last_answer)
