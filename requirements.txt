@@ -1,0 +1,9 @@
+streamlit
+openai
+chromadb
+llama-index-core
+llama-index-readers-file
+rank-bm25
+sentence-transformers
+pypdf
+docx2txt
