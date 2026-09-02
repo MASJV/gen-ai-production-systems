@@ -4,6 +4,15 @@ An enterprise multi-document RAG (Retrieval-Augmented Generation) system.
 Upload PDF / DOCX / TXT / MD / CSV files, ask a question, and get an
 answer grounded in your own documents — with hybrid search and reranking.
 
+## Demo
+
+A short walkthrough of the app in action — upload documents, ask a
+question, and see the grounded answer with its retrieved source chunks.
+
+- **Live app:** https://enterprise-knowledge-assistant-jv.streamlit.app/
+- **Demo video:** https://drive.google.com/file/d/1AYEjy70bPxON1RCLzgnhFa5jVh-ABDOs/view?usp=sharing
+- **Slides:** [architecture-overview.pptx](./architecture-overview.pptx)
+
 ## Architecture
 
 ```
@@ -94,4 +103,3 @@ This project only uses cheap OpenAI models:
 
 Chroma (vector database) and the BGE reranker both run for **free**
 on your own computer — no extra API cost for search or reranking.
-
